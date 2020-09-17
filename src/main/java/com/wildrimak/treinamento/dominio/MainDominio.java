@@ -12,7 +12,9 @@ public class MainDominio {
 	public static void main(String[] args) {
 
 		ApplicationContext context = new SpringApplicationBuilder(GerenciandoJpaComJavaApplication.class)
-				.web(WebApplicationType.NONE).profiles("prod").run(args);
+				.web(WebApplicationType.NONE)
+//				.profiles("prod")
+				.run(args);
 
 		
 		ClienteJPA clienteJPA = context.getBean(ClienteJPA.class);
